@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bernoulli Engenharia</title>
+
+  <!-- Icones -->
+  <script src="https://kit.fontawesome.com/898bd1013b.js" crossorigin="anonymous"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div id="header">
+      <div id="line1">
+        <p><i class="fas fa-envelope"></i> engenharia@bernoulliengenharia.com.br <i class="fab fa-whatsapp"></i> (62) 3624-3003</p>
+      </div>
+      <div id="line2">
+        <a id="logo" href="">Logo</a>
+        <nav id="nav">
+          <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span></button>
+          <ul id="menu" role="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre Nós</a></li>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href="register.html">Orçamento</a></li>
+            <li><a href="">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="banner-index">
+      
+
+      <div class="content-banner">
+        <img src="./img/banner-about.jpg" alt="" />
+        <div class="col1 service-main-banner">
+          <h1>Nossos Serviços</h1>
+          <p>Instalação de Sistemas Central e Manutenção, Projeto de Ar-Condicionado em Goiânia e Região e território Nacional.</p>
+        </div>
+      </div> 
+    </div>
+  </header>
+
+  <section class="section-form">
+    <div class="form-register">
+      <h1>Preencha todos os campos</h1>
+      <form id='form-register'>
+        <h2>Dados Pessoais</h2>
+        <label for="name">Nome</label><br>
+        <input required type="text" id="name" name="name" placeholder="Digite o seu nome completo"><br>
+        <label for="phone">Telefone/celular</label><br>
+        <input required type="tel" id="phone" name="phone" placeholder="Digite o seu número"><br>
+        <label for="mail">Email</label><br>
+        <input required type="email" id="email" name="email" placeholder="Digite o seu email">
+
+        <h2>Tipos de serviços</h2>
+        <label for="service">Serviço</label><br>
+        <select class="form-control dadosGerais obrigatorio" id="service" name="service" required>
+          <option value="" disabled selected hidden>Escolha uma Opção</option>
+          <option value="Juridica" selected>Manutenção</option>
+          <option value="Física">Instalação</option>
+          <option value="Física">Visita Técnica</option>
+        </select><br>
+
+        <!-- <div class="row-form">
+          <div class="cols-form">
+            <label for="environment">Ambiente</label>
+            <select class="form-control dadosGerais obrigatorio" id="environment" name="environment" required>
+              <option value="" disabled selected hidden>Escolha uma Opção</option>
+              <option value="Juridica" selected>Residência</option>
+              <option value="Física">Comercial</option>
+            </select>
+          </div>
+
+          <div class="cols-form">
+            <label for="dateBirth">Data de nascimento</label>
+            <input required type="date" id="dateBirth" name="dateBirth" placeholder="Digite a data de nascimento">
+          </div>
+        </div> -->
+
+        <h2>Mensagem</h2>
+        <label for="message">Escreva qual o seu serviço</label><br>
+        <textarea name="message" id="message" required rows="5" cols="61" minlength="10" maxlength="450"
+          placeholder="Digite aqui..."></textarea>
+
+        <button id='submit'>Enviar!</button>
+
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="cols-all">
+      <div class="col-footer">
+        <h1>Bernoullie Engenharia</h1>
+        <p>Atuamos no seguimento de manutenção de ar condicionado, vendas, instalação, projetos, implantação de PMOC, sistema de combate a incêndio, sistema de pressurização, exaustão, ventilação mecânica forçada e consultoria. Fale com nossa equipe sobre sua necessidade.</p>
+      </div>
+
+      <div class="col-footer">
+        <h1>Menu</h1>
+        <ul>
+          <li><a href="index.html" alt="" class="active">Home</a></li>
+          <li><a href="about.html" alt="">Sobre nós</a></li>
+          <li><a href="services.html" alt="">Serviços</a></li>
+          <li><a href="register.html" alt=""> Orçamento</a></li>
+          <li><a href="contact.html" alt="">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="col-footer">
+        <h1>Contato</h1>
+        <div class="line-address">
+          <div class="icones-footer">
+            <i class="fas fa-city"></i>
+          </div>
+          <h3>Goiânia - Brasília</h3>
+        </div>
+
+        <div class="line-address">
+          <div class="icones-footer">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>(62) 3624-3003</h3>
+        </div>
+
+        <div class="line-address">
+          <div class="icones-footer">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3> engenharia@bernoulliengenharia.com.br</h3>
+        </div>
+      </div>
+    </div>
+    <h4>Todos os direitos reservados - Bernoulli Engenharia Serviços e Consultoria - <a href="https://www.instagram.com/edgardevv/" target="_blank" alt="">EvoluTI</a></h4>
+  </footer>
+
+  
+  <script>
+    $(window).scroll(function () {
+      if ($(window).scrollTop()) {
+        $("nav").addClass("black") || $("nav").addClass("black:hover");
+      }
+      else {
+        $("nav").removeClass("black")
+      }
+    });
+  </script>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
