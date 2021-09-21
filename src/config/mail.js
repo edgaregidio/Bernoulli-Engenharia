@@ -10,7 +10,7 @@ module.exports = {
     },
   }),
   options: {
-    from: `"EvoluTI" <${process.env.EMAIL_USER}>`,
-    to: "edgarsiqueirasi@gmail.com",
+    from: `"Novo Orçamento" <${process.env.EMAIL_USER}>`,
+    to: "engenharia@bernoulliengenharia.com.br",
   },
 };
