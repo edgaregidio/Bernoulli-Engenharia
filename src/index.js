@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-app.get("/", (req, res) => {
+app.get("/app", (req, res) => {
   res.send(
     "Oloa, esta aplicação esta rodando em NodeJs versão " + process.version
   );
