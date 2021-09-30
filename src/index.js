@@ -16,6 +16,12 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
+app.get("/", (req, res) => {
+  res.send(
+    "Oloa, esta aplicação esta rodando em NodeJs versão " + process.version
+  );
+});
+
 app.listen(21093 || 3000, () => {
   console.log("Server Running");
 });
