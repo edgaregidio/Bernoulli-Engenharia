@@ -15,6 +15,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/manifest.json">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -25,8 +26,6 @@
 
   <!-- Icones -->
   <script src="https://kit.fontawesome.com/898bd1013b.js" crossorigin="anonymous"></script>
-
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -47,8 +46,8 @@
             <li><a href="index.html" alt="">Home</a></li>
             <li><a href="about.html" alt="">Sobre Nós</a></li>
             <li><a href="services.html" alt="">Serviços</a></li>
-            <li><a href="register.html" alt="" class="active-nav">Orçamento</a></li>
-            <li><a href="partners.html" alt="">Parceiros</a></li>
+            <li><a href="register.html" alt="">Orçamento</a></li>
+            <li><a href="partners.html" alt="" class="active-nav">Parceiros</a></li>
             <li><a href="https://api.whatsapp.com/send?phone=556236243003&text=Ol%C3%A1!">Contato</a></li>
           </ul>
         </nav>
@@ -58,61 +57,60 @@
       
 
       <div class="content-banner">
-        <img src="./img/banner-register.png" alt="" />
+        <img src="./img/banner01.png" alt="" />
         <div class="col1 service-main-banner">
-          <h1>Faça seu Orçamento aqui!</h1>
-          <p>Preencha todos os campo e logo logo vamos entrar em contato!</p>
+          <h1>Nossos Fernecedores e Parceiros!</h1>
+          <p></p>
         </div>
       </div> 
     </div>
   </header>
 
-  <section class="section-form">
-    <div class="form-register">
-      <h1>Preencha todos os campos</h1>
-      <form id='form-register'>
-        <h2>Dados Pessoais</h2>
-        <label for="name">Nome</label><br>
-        <input required type="text" id="name" name="name" placeholder="Digite o seu nome completo"><br>
-        <label for="phone">Telefone/celular</label><br>
-        <input required type="tel" id="phone" name="phone" placeholder="Digite o seu número"><br>
-        <label for="mail">Email</label><br>
-        <input required type="email" id="email" name="email" placeholder="Digite o seu email">
-
-        <h2>Tipos de serviços</h2>
-        <label for="service">Serviço</label><br>
-        <select class="form-control dadosGerais obrigatorio" id="service" name="service" required>
-          <option value="" disabled selected hidden>Escolha uma Opção</option>
-          <option value="Juridica" selected>Implantação do PMOC</option>
-          <option value="Física">Projetos e Consultotia em Climatização</option>
-        </select><br>
-
-        <!-- <div class="row-form">
-          <div class="cols-form">
-            <label for="environment">Ambiente</label>
-            <select class="form-control dadosGerais obrigatorio" id="environment" name="environment" required>
-              <option value="" disabled selected hidden>Escolha uma Opção</option>
-              <option value="Juridica" selected>Residência</option>
-              <option value="Física">Comercial</option>
-            </select>
-          </div>
-
-          <div class="cols-form">
-            <label for="dateBirth">Data de nascimento</label>
-            <input required type="date" id="dateBirth" name="dateBirth" placeholder="Digite a data de nascimento">
-          </div>
-        </div> -->
-
-        <h2>Mensagem</h2>
-        <label for="message">Escreva qual o seu serviço</label><br>
-        <textarea name="message" id="message" required rows="5" cols="61" minlength="10" maxlength="450"
-          placeholder="Digite aqui..."></textarea>
-
-        <button id='submit'>Enviar!</button>
-
-      </form>
+  <section class="section-partners">
+    <h1>Confira todos os nossos fornecedores e parceiros!</h1>
+    <div class="grids-partners">
+      <div class="content-partners">
+        <img src="./img/partners/part1.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part2.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part3.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part4.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part5.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part6.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part7.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part8.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part9.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part10.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part11.jpeg">
+      </div>
+      <div class="content-partners">
+        <img src="./img/partners/part12.jpeg">
+      </div>
     </div>
   </section>
+
+  
+
+  
 
   <footer>
     <div class="cols-all">
@@ -177,19 +175,12 @@
     bntMobile.addEventListener('click', toggleMenu);
     bntMobile.addEventListener('touchstart', toggleMenu);
   </script>
-  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    $(window).scroll(function () {
-      if ($(window).scrollTop()) {
-        $("nav").addClass("black") || $("nav").addClass("black:hover");
-      }
-      else {
-        $("nav").removeClass("black")
-      }
-    });
+    AOS.init();
   </script>
 
-  <script src="js/index.js"></script>
+  
 </body>
-
 </html>
