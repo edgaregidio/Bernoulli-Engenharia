@@ -17,9 +17,10 @@ app.use(express.json());
 app.use(routes);
 
 app.get("/", (req, res) => {
-  res.send(
-    "Olá, esta aplicação esta rodando em NodeJs versão " + process.version
-  );
+  // res.send(
+  //   "Olá, esta aplicação esta rodando em NodeJs versão " + process.version
+  // );
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 app.listen(21115 || 3000, () => {

@@ -327,6 +327,7 @@ body header .banner-index .content-banner img {
   opacity: 0.4;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 body header .banner-index .content-banner .col1 {
@@ -353,12 +354,20 @@ body header .banner-index .content-banner .col1 {
 
 body header .banner-index .content-banner .col1 p {
   font-weight: 200;
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+body header .banner-index .content-banner .col1 h1 {
+  font-size: 2.4rem;
 }
 
 @media only screen and (max-width: 1360px) {
   body header .banner-index .content-banner .col1 {
-    bottom: 20rem;
+    bottom: 25rem;
     left: 38rem;
+  }
+  body header .banner-index .content-banner .col1 p {
+    font-size: 1.2rem;
   }
 }
 
@@ -972,25 +981,26 @@ body .section-form .form-register form .row-form .cols-form + .cols-form {
 }
 
 .section-partners .grids-partners {
-  /* width: 90%; */
+  width: 70%;
   height: auto;
 
   display: grid;
 
   grid-template-columns: repeat(3, 4fr);
-  grid-template-rows: 13rem;
+  grid-template-rows: 7rem;
 
   grid-gap: 1rem;
-  /* grid-column-gap: 1rem;
-  grid-row-gap: 1rem; */
+  /* grid-column-gap: 1rem; */
+  /* grid-row-gap: 1rem; */
 
   /* margin-bottom: 10rem; */
   margin: 5rem 0;
 }
 
 .section-partners .grids-partners .content-partners {
-  object-fit: cover;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 25rem;
   display: flex;
@@ -998,7 +1008,7 @@ body .section-form .form-register form .row-form .cols-form + .cols-form {
 }
 
 .section-partners .grids-partners .content-partners img {
-  width: 100%;
+  width: 70%;
   max-width: 25rem;
   cursor: pointer;
 }
